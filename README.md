@@ -9,7 +9,7 @@ Apply javascript events on DOM-tree.
 ### Project Properties:
 - Map Navbar Elements to Clicked Area 
 - Area in display is interactive. 
-- Easy to add new sections, onle one line is added in the script file.
+- Easy to add new sections, only one line is added in the script file.
 
 
 #### Devoloper Notes:
