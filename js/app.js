@@ -24,19 +24,17 @@
  list_of_sections.push(document.getElementById("section3"));
  list_of_sections.push(document.getElementById("section4"));
  // ~ New Sections can be added here ~
-
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
-
 // refrence: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 // reference: https://www.youtube.com/watch?v=T8EYosX4NOo&app=desktop 
 
 let options = {
     root: null, //Defaults to the browser viewport if not specified or if null
-    rootMargin: '-10px',
+    rootMargin: '0px',
     threshold: 1.0
   }
   
@@ -48,19 +46,11 @@ let options = {
     });
   }, options);
 
-  list_of_sections.forEach(section=> {
-    observer.observe(section);
-  })
-  
-
-
-
 /**
  * End Helper Functions
  * Begin Main Functions
  * 
 */
-
 // build the nav
 function navBuilder(){
     // first, let me get the nav:
@@ -88,20 +78,17 @@ function navBuilder(){
     } // will use fragment if possabile.
 }
 
-
-
-
-
 /**
  * End Main Functions
  * Begin Events
  * 
 */
 
-// Build menu 
+// Build menu & Scroll to section on link click
 navBuilder();
-// Scroll to section on link click
 
 // Set sections as active
-
+list_of_sections.forEach(section=> {
+  observer.observe(section);
+})
 
