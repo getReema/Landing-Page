@@ -10,9 +10,17 @@
 
 
 /* ---- Base Rules ---- */
+
+/* source for the scroll code: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
+/* Edited */
+html {
+    scroll-behavior: smooth;
+  }
+
+
 body {
-    background: rgb(219, 165, 219);
-    background: linear-gradient(0deg, rgb(219, 165, 219,1) 0%, rgb(80, 4, 151) 100%);
+    background: rgb(219, 165, 219); /* Edited */
+    background: linear-gradient(0deg, rgb(219, 165, 219,1) 0%, rgb(80, 4, 151) 100%); /* Edited */
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -67,11 +75,13 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    /*text-align: right;*/ /* Edited */
 }
 
 .navbar__menu li {
     display: inline-block;
+   color:  rgb(80, 4, 151);  /* Edited */
+    margin: 10px; /* Edited */
 }
 
 .navbar__menu .menu__link {
