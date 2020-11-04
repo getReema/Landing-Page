@@ -11,8 +11,8 @@
 
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: rgb(219, 165, 219);
+    background: linear-gradient(0deg, rgb(219, 165, 219,1) 0%, rgb(80, 4, 151) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -99,13 +99,13 @@ section {
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
+    background: #fff ;
     padding: 3em;
-    color: #fff;
+    color: #000;
 }
 
 .page__footer p{
-    color: #fff;
+    color: #000;
 }
 
 
