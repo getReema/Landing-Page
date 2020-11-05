@@ -35,14 +35,16 @@
 let options = {
     root: null, //Defaults to the browser viewport if not specified or if null
     rootMargin: '0px',
-    threshold: 1.0
+    threshold: 0.5
   }
   
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if(entry.isIntersecting)
+        if(entry.target.classList.contains("your-active-class"))
+        return;
             // Add class 'active' to section when near top of viewport
-            entry.target.classList.toggle("your-active-class");
+        entry.target.classList.toggle("your-active-class");
     });
   }, options);
 
@@ -68,6 +70,7 @@ function navBuilder(){
         //-- #source for this idea:https://www.geeksforgeeks.org/how-to-create-a-link-in-javascript/ -- 
          //-- #source for getAttribute https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
         anchor.href ="#"+list_of_sections[i].getAttribute("id");
+        anchor.classList.add('menu__link');
 
         // get the text content based on the data-nav:
         nav_element.textContent= list_of_sections[i].getAttribute("data-nav");
